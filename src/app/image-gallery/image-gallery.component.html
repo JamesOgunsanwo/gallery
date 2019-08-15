@@ -1,0 +1,15 @@
+<h2 style="text-align:center">Gallery</h2>
+<div> 
+  <button [ngClass]="[selectedButton === ''  ? 'buttonSelected' : 'notselected']" (click)="filterOnSelection('')">All</button>
+  <button [ngClass]="[selectedButton === 'a' ? 'buttonSelected' : 'notselected']" (click)="filterOnSelection('a')">Illustrations</button>
+  <button [ngClass]="[selectedButton === 'b' ? 'buttonSelected' : 'notselected']" (click)="filterOnSelection('b')">Logos</button>
+  <button [ngClass]="[selectedButton === 'c' ? 'buttonSelected' : 'notselected']" (click)="filterOnSelection('c')">Graphics</button>
+  <button [ngClass]="[selectedButton === 'd' ? 'buttonSelected' : 'notselected']" (click)="filterOnSelection('d')">Videos</button>
+</div>
+<div class="row">
+  <div class="column" *ngFor="let image of imageArray; let i = index">
+      <figure class="tint {{returnColour(i)}}">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg" style="width:100%">
+    </figure>
+  </div>
+</div>

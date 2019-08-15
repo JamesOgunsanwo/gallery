@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  .container {
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      position: relative;
+  }
+
+  img{
+    display: block;
+    z-index: -1;
+  }
+
+  button {
+    border: 2px solid rgba(21, 68, 99, 0.466);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  .buttonSelected {
+    background-color: rgba(112, 243, 243, 0.5);
+    /* background-image: linear-gradient(rgba(112, 243, 243, 0.2), rgba(3, 36, 36, 0.7)); */
+    border: 2px solid rgba(21, 68, 99, 0.466);
+  }
+
+  /* On hover effects */
+  .tint {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -webkit-transition: ease-in-out 3s;
+    transition: ease-in-out 3s;
+  }
+
+  .tint:hover:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(112, 243, 243, 0.5);
+    background-image: linear-gradient(rgba(112, 243, 243, 0.2), rgba(3, 36, 36, 0.7));
+    -webkit-transition: ease-in-out 3s;
+    transition: ease-in-out 3s;
+  }
+
+  .tint:hover { background: none; }
+
+.t2:hover:after { background-image: linear-gradient(rgba(112, 243, 112, 0.2), rgba(5, 71, 5, 0.8)); }
+.t3:hover:after { background-image: linear-gradient(rgba(243, 208, 112, 0.2), rgba(117, 80, 10, 0.8)); }
+.t4:hover:after { background-image: linear-gradient(rgba(253, 66, 66, 0.2), rgba(78, 13, 7, 0.8)); }
+
+/* Responsive layout */ 
+@media only screen and (max-width: 540px) {
+    .column { width: 100%; }
+  }
+
+@media only screen and (min-width: 540px) {
+    .column { width: 100%; }
+  }
+
+  @media only screen and (min-width: 700px) {
+    .column { float: left; width: 50%; }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .column { float: left; width: 33%;}
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .column { float: left; width: 25%; }
+  }
+
+
